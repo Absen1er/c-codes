@@ -27,7 +27,7 @@ int main() {
         kq = char((so % 10) + '0') + kq;
         so /= 10;
     }
-    while (kq[0] == '0') {
+    while (kq[0] == '0' && kq.size() > 1 {
         kq.erase(0, 1);
     }
     cout << kq;
