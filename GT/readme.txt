@@ -1,0 +1,1 @@
+this code return the factorial of any number
