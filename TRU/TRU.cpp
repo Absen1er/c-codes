@@ -21,7 +21,6 @@ int main() {
         }
         kq.push_back(so + '0');
     }
-<<<<<<< HEAD
     for (int i = n1 - n2 - 1; i >= 0; i--) {
         if (num1[i] == '0' && nho) {
             kq.push_back('9');
@@ -32,10 +31,8 @@ int main() {
             kq.push_back(sub + '0');
         }
         nho = 0;
-=======
-    while (kq[0] == '0' && kq.size() > 1 {
+    while (kq[0] == '0' && kq.size() > 1) {
         kq.erase(0, 1);
->>>>>>> 9e89abff6eb0ab34a982e389fcd4dfb682457ef1
     }
     reverse(kq.begin(), kq.end());
     cout << kq;
