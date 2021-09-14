@@ -2,29 +2,24 @@
 
 using namespace std;
 
-bool kt(long long N) {
-    long long x = 2;
-    while (x * x <= N) {
-        if (N % (x * x) == 0) {
-            return false;
-        }
-        x++;
-    }
-
-    return true;
-}
-
 int main() {
     freopen("SQFREE.inp","r",stdin);
     freopen("SQFREE.out","w",stdout);
     long long m;
     while (cin >> m) {
-        for (long long i = m; i >= 1; i--) {
-            if (m % i == 0 && kt(i) == true) {
-                cout << i << endl;
-                break;
-            } 
+        long long kq = 1;
+        for (int i = 2; i * i <= m; i++) {
+            if (m % i == 0) {
+                kq *= i;
+                while (m % i == 0) {
+                    m /= i;
+                }
+            }
         }
+        if (m > 1) {
+            kq *= m;
+        }
+        cout << kq << endl;
     }
     return 0;
 }
