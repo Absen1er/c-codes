@@ -25,12 +25,12 @@ int main() {
     //freopen("NUMSUM.out","w",stdout);
     int N;
     cin >> N;
-    string a[100001], t = "0", s;
+    string a[100001], t = "0";
     for (int i = 0; i < N; i++) {
         cin >> a[i];
     }
-    for (int i = 0; i < N - 1; i++) {
-        for (int j = i + 1; j < N; j++) {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
             string so = a[i] + a[j];
             t = cong(t, so);
         }
