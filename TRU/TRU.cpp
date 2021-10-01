@@ -3,11 +3,32 @@
 
 using namespace std;
 
+bool isSmaller(string str1, string str2)
+{
+    int n1 = str1.size(), n2 = str2.size();
+ 
+    if (n1 < n2)
+        return true;
+    if (n2 < n1)
+        return false;
+ 
+    for (int i = 0; i < n1; i++)
+        if (str1[i] < str2[i])
+            return true;
+        else if (str1[i] > str2[i])
+            return false;
+ 
+    return false;
+}
+
 int main() {
-    freopen("TRU.inp","r",stdin);
-    freopen("TRU.out","w",stdout);
+    bool kt = true;
     string num1, num2;
     cin >> num1 >> num2;
+    if (isSmaller(num1, num2)) {
+        swap(num1, num2);
+        kt = false;
+    }
     string kq = "";
     int so = 0, nho = 0;
     int n1 = num1.size(), n2 = num2.size(), diff = n1 - n2;
@@ -31,9 +52,14 @@ int main() {
             kq.push_back(sub + '0');
         }
         nho = 0;
+    }
     while (kq[0] == '0' && kq.size() > 1) {
         kq.erase(0, 1);
     }
     reverse(kq.begin(), kq.end());
-    cout << kq;
+    if (kt == false) {
+        cout << "-" << kq;
+    } else {
+        cout << kq;
+    }
 }
