@@ -28,6 +28,10 @@ int main() {
           cs = i;
       }
     }
+    if (maxso == 0) {
+        cout << "-1";
+        return 0;
+    }
     cout << maxso << endl;
     for (int i = cs - maxso + 1; i <= cs; i++) {
         cout << a[i] << " ";

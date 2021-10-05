@@ -1,12 +1,18 @@
 #include <iostream>
 #include <cstring>
+#include <climits>
+
+long long a[100001], f[100001];
 
 using namespace std;
 
 int main() {
     freopen("CONLE.inp","r",stdin);
     freopen("CONLE.out","w",stdout);
-    long long n, a[100001], f[100001], maxso = -1, cs;
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    long long n, maxso = LLONG_MIN, cs;
     cin >> n;
     for (int i = 0; i < n; i++) {
         cin >> a[i];
@@ -16,7 +22,7 @@ int main() {
         f[0] = 1;
     }
     for (int i = 1; i < n; i++) {
-        if (a[i] % 2 == 1) {
+        if (a[i] % 2 != 0) {
             f[i] = f[i - 1] + 1;
         } else {
             f[i] = 0;
@@ -25,6 +31,10 @@ int main() {
             maxso = f[i];
             cs = i;
         }
+    }
+    if (maxso == 0) {
+        cout << "-1";
+        return 0;
     }
     cout << maxso << endl;
     for (int i = cs - maxso + 1; i <= cs; i++) {
