@@ -18,8 +18,8 @@ int main() {
     for (int i = 1; i < N; i++) {
         F[i] = 0;
         for (int j = 0; j < i; j++) {
-            if (A[i] > A[j]) {
-                F[i] = max(F[i], F[j] + 1);
+            if (A[i] >= A[j] && F[i] < F[j] + 1) {
+                F[i] = F[j] + 1;
             }
         }
         kq = max(F[i], kq);
