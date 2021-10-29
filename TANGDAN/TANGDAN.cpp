@@ -16,7 +16,7 @@ int main() {
     F[0] = 1;
     int to = A[0];
     for (int i = 1; i < N; i++) {
-        F[i] = 0;
+        F[i] = 1;
         for (int j = 0; j < i; j++) {
             if (A[i] >= A[j] && F[i] < F[j] + 1) {
                 F[i] = F[j] + 1;
