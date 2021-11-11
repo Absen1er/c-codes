@@ -22,10 +22,10 @@ string cong(string num1, string num2) {
 }
 
 int main() {
-    freopen("CARROT.inp","r",stdin);
-    freopen("CARROT.out","w",stdout);
+    //freopen("CARROT.inp","r",stdin);
+    //freopen("CARROT.out","w",stdout);
     int k, n;
-    while (cin >> k >> n) {
+    while (cin >> n >> k) {
         string a[301];
         for (int i = 0; i < n; i++) {
             a[i] = "0";
