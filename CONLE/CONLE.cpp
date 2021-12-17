@@ -2,7 +2,7 @@
 #include <cstring>
 #include <climits>
 
-long long a[100001], f[100001];
+long long a[1000001], f[1000001];
 
 using namespace std;
 
