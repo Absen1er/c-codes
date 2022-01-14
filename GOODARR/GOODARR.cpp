@@ -7,7 +7,7 @@ long long a[200001];
 int main() {
     freopen("GOODARR.inp","r",stdin);
     freopen("GOODARR.out","w",stdout);
-    long long n, maxso = LLONG_MIN, t = 0;
+    long long n, t = 0;
     cin >> n;
     for (int i = 1; i <= n; i++) {
         cin >> a[i];
@@ -20,10 +20,7 @@ int main() {
             kq++;
         }
     }
-    for (int i = 1; i < n; i++) {
-        maxso = max(maxso, a[i]);
-    }
-    if (maxso * 2 == t - a[n]) kq++;
+    if (a[n - 1] * 2 == t - a[n]) kq++;
     cout << kq;
     return 0;
 }
