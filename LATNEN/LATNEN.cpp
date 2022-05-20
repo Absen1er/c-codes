@@ -21,12 +21,13 @@ string cong(string num1, string num2) {
     return kq;
 }
 
+string A[201];
+
 int main() {
     freopen("LATNEN.inp","r",stdin);
     freopen("LATNEN.out","w",stdout);
     int N;
     cin >> N;
-    string A[201];
     A[1] = "1";
     A[2] = "2";
     for (int i = 3; i <= N; i++) {

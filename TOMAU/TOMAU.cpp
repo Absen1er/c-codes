@@ -21,12 +21,13 @@ string cong(string num1, string num2) {
     return kq;
 }
 
+string A[201];
+
 int main() {
     freopen("TOMAU.inp","r",stdin);
     freopen("TOMAU.out","w",stdout);
     int N;
     cin >> N;
-    string A[201];
     A[1] = "2";
     A[2] = "3";
     for (int i = 3; i <= N; i++) {
